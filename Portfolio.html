@@ -90,7 +90,7 @@
         
         <div id="portfolio-cat">
             <div id="speech-bubble">Hi there! Welcome to my portfolio.</div>
-            <img src="assets/img/cat-mascot.png" alt="Waving Cat Mascot" style="width: 100%;" />
+            <img src="cat-mascot.png" alt="Waving Cat Mascot" style="width: 100%;" />
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
@@ -399,16 +399,16 @@
         currentCatState = newState;
         switch (newState) {
             case 'idle':
-                catImage.src = 'assets/img/cat-mascot.png';
+                catImage.src = 'cat-mascot.png';
                 if (catImage.src.indexOf('sleeping') === -1) { // Only restore message if not currently sleeping
                     speechBubble.innerText = catMessages[lastSection];
                 }
                 break;
             case 'moving':
-                catImage.src = 'assets/img/cat-mascot-moving.png';
+                catImage.src = 'cat-mascot-moving.png';
                 break;
             case 'sleeping':
-                catImage.src = 'assets/img/cat-mascot-sleeping.png';
+                catImage.src = 'cat-mascot-sleeping.png';
                 speechBubble.innerText = "Zzz... Waiting for activity...";
                 break;
         }
@@ -419,7 +419,7 @@
     function createPawPrint() {
         const paw = document.createElement('div');
         paw.classList.add('paw-print');
-        paw.style.backgroundImage = 'url("assets/img/paw-print.png")'; 
+        paw.style.backgroundImage = 'url("paw-print.png")'; 
         
         const catRect = catImage.getBoundingClientRect();
         const currentScrollY = window.scrollY;
